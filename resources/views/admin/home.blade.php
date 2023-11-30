@@ -2,6 +2,6 @@
 
 @section('content')
 
-    @include('admin.partials.sidebar')
+  <h2>Home dashboard</h2>
 
 @endsection

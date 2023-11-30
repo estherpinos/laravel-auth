@@ -24,6 +24,7 @@ use App\Http\Controllers\Admin\TypeController;
 Route::get('/',[PageController::class, 'index'])->name('home');
 
 
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -35,9 +36,10 @@ Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
-        Route::get('/', [TypeController::class, 'index'])->name('home');
-        Route::get('/', [TecnologyController::class, 'index'])->name('home');
-        Route::get('/', [ProjectController::class, 'index'])->name('home');
+        Route::resource('types', TypeController::class);
+        Route::resource('tecnlogoies', TecnologyController::class);
+        Route::resource('projects', ProjectController::class);
+
 
 
     });
