@@ -35,10 +35,12 @@ class ProjectController extends Controller
         $form_data = $request->all();
 
 
-
         $new_project = new Project();
         $new_project->title =$form_data['title'];
         $new_project->description =$form_data['description'];
+        $new_project->slug =$form_data['slug'];
+
+
 
         $new_project->save();
     }
