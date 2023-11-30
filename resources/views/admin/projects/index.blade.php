@@ -22,7 +22,10 @@
             <td>{{$project->id}}</td>
             <td>{{$project->title}}</td>
             <td>{{$project->description}}</td>
-            {{-- <td><a href="{{route('projects.show', $comic->id)}}" class="btn btn-success"><i class="fa-solid fa-pencil"></i></a></td> --}}
+            <td>
+                <a href="{{ route('admin.projects.create', $project) }}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+
+            </td>
 
 
           </tr>

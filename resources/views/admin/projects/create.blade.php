@@ -1,13 +1,13 @@
-@extends('layouts.main')
+@extends('admin.home')
 
 @section('content')
-<h1>Inserimento nuovo comic</h1>
+<h1>Inserimento nuovo proggetto</h1>
 
 <div class="row">
     <div class="col-8">
 
         @csrf
-        <form action="{{route('comic.store')}}" method="POST">
+        <form action="{{route('admin.projects.store')}}" method="POST">
             @csrf
 
             <div class="mb-3">

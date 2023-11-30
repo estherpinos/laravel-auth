@@ -11,7 +11,8 @@ class Tecnology extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title'
+        'title',
+        'slug'
     ];
 
     public static function generateSlug($title){
