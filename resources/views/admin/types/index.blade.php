@@ -9,6 +9,7 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Title</th>
+        <th scope="col">Azioni</th>
 
       </tr>
     </thead>
