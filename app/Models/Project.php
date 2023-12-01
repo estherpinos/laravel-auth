@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use Database\Seeders\ProjectsTableSeeder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 
 class Project extends Model
 {
@@ -12,7 +12,6 @@ class Project extends Model
 
     protected $fillable = [
         'title',
-        'slug',
         'description'
     ];
 

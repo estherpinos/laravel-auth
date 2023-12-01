@@ -20,7 +20,10 @@
         <tr>
             <td>{{$type->id}}</td>
             <td>{{$type->title}}</td>
-            {{-- <td><a href="{{route('projects.show', $comic->id)}}" class="btn btn-success"><i class="fa-solid fa-pencil"></i></a></td> --}}
+            <td>
+                <a href="{{ route('admin.types.show', $type) }}" class="btn btn-warning "><i class="fa-solid fa-eye"></i></a>
+                <a href="{{ route('admin.types.create', $type) }}" class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
+            </td>
 
 
           </tr>

@@ -20,7 +20,10 @@
         <tr>
             <td>{{$tecnology->id}}</td>
             <td>{{$tecnology->title}}</td>
-            {{-- <td><a href="{{route('projects.show', $comic->id)}}" class="btn btn-success"><i class="fa-solid fa-pencil"></i></a></td> --}}
+            <td>
+                <a href="{{ route('admin.tecnlogoies.show', $tecnology) }}" class="btn btn-warning "><i class="fa-solid fa-eye"></i></a>
+                <a href="{{ route('admin.tecnlogoies.edit', $tecnology) }}" class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
+            </td>
 
 
           </tr>

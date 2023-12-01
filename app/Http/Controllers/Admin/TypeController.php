@@ -22,7 +22,8 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.types.create');
+
     }
 
     /**
@@ -30,7 +31,15 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+
+        $new_type = new Type();
+        $new_type->title =$form_data['title'];
+
+        $new_type->save();
+
+        return redirect()->route('admin.tecnologies.show', $new_type->id);
+
     }
 
     /**
@@ -38,7 +47,8 @@ class TypeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $type = Type::find($id);
+        return view('admin.types.show', compact('type'));
     }
 
     /**

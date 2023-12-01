@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
-use App\Functions\Helper;
 
 class ProjectController extends Controller
 {
@@ -34,15 +33,14 @@ class ProjectController extends Controller
     {
         $form_data = $request->all();
 
-
         $new_project = new Project();
         $new_project->title =$form_data['title'];
         $new_project->description =$form_data['description'];
-        $new_project->slug =$form_data['slug'];
-
-
 
         $new_project->save();
+
+        return redirect()->route('admin.projects.show', $new_project->id);
+
     }
 
     /**
@@ -50,7 +48,8 @@ class ProjectController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $project = Project::find($id);
+        return view('admin.projects.show', compact('project'));
     }
 
     /**

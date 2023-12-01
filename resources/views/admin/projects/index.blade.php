@@ -23,7 +23,9 @@
             <td>{{$project->title}}</td>
             <td>{{$project->description}}</td>
             <td>
-                <a href="{{ route('admin.projects.create', $project) }}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+                <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-warning "><i class="fa-solid fa-eye"></i></a>
+                <a href="{{ route('admin.projects.create', $project) }}" class="btn btn-danger"><i class="fa-solid fa-pencil"></i></a>
+
 
             </td>
 

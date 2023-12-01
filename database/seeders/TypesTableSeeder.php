@@ -21,7 +21,6 @@ class TypesTableSeeder extends Seeder
         for($i = 0; $i < 10; $i++) {
             $new_type = new Type();
             $new_type ->title = $faker->sentence(3);
-            $new_type ->slug = Type::generateSlug($new_type ->title);
             $new_type ->save();
         }
 
