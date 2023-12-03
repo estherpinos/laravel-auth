@@ -22,7 +22,7 @@ class ProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            "title"=>"required",
+            "title"=>"required|max:70",
             "description"=>"required"
 
         ];
